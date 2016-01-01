@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'ResumeController@index');
+
+Route::get('monkey', function() {
+    echo "Monkey url!";
+});
 
 Route::get('home', 'HomeController@index');
 
