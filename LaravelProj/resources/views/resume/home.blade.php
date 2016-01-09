@@ -24,13 +24,17 @@
                 model natural or random seeming behaviour.
             </p>
             <p>
+                Simple math tricks can be used for display, game mechanics, or to make
+                reasonable guesses about what users want based on little information.
+            </p>
+            <p>
                 My name is Chris and I'm a student of both software and mathematics.
                 To learn more or contact me click the <em>About Me</em> button on
                 the left.
             </p>
-            <p>
-                PS - <em>try clicking on the background.</em>
-            </p>
+            <h3>
+                PS - try clicking on the background!
+            </h3>
         </article>
         <nav class="slideButton">
             About Me &nbsp;&nbsp;&dtri;

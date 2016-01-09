@@ -69,6 +69,20 @@ h1 .subtitle {
     background: -moz-linear-gradient(center top, rgb(170,130,100), rgb(100,80,50));
 }
 
+.headerButton#moreFish {
+    background: #0079FF;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0096FF), to(#005DFF));
+    background: -webkit-linear-gradient(0% 0%, 0% 100%, from(#0096FF), to(#005DFF));
+    background: -moz-linear-gradient(center top, #0096FF, #005DFF);
+}
+
+.headerButton#moreFish:hover {
+    background: #005DFF;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0033FF), to(#005DFF));
+    background: -webkit-linear-gradient(0% 0%, 0% 100%, from(#0033FF), to(#005DFF));
+    background: -moz-linear-gradient(center top, #0033FF, #005DFF);
+}
+
 article.floatingRight {
     float: right;
     width: 340px;
