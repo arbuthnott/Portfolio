@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use App\Skill;
 use App\Course;
+use App\Project;
 
 class DatabaseSeeder extends Seeder {
 
@@ -20,17 +21,144 @@ class DatabaseSeeder extends Seeder {
 		$this->call('SkillsTableSeeder');
 		$this->call('CourseTableSeeder');
 		$this->call('ProjectTableSeeder');
+		
+		//TODO: still need math degrees as 'courses' and job history as 'projects'
 	}
 }
 
 class ProjectTableSeeder extends Seeder {
 	public function run() {
+		// Class Projects
+		$bookstore = Project::create([
+			'name' => 'J2EE E-Commerce Bookstore Website', 'alias' => 'bookstore', 'github_link' => "https://github.com/arbuthnott/JavaJ2EE",
+			'importance' => 5, 'completion_date' => '2015-12-12',
+			'description' => "Created for my college J2EE course, this is a sketch of a full e-commerce website for a bookstore, built from scratch using J2EE tools.  The site includes separate user and admin login, with a web-interface back end for administrative users to update records or inventories.  Regular site visitors have access to a modifiable profile, a virtual shopping carts and records of their previous orders.  The full code is available on github, and includes a document with one sentence descriptions of each servlet, filter, and .jsp file."]);
+		$ttt = Project::create([
+			'name' => 'TicTacToe with AI Opponent', 'alias' => 'ttt', 'github_link' => "https://github.com/arbuthnott/CPPVisualStudio/tree/master/TicTacToeV2",
+			'importance' => 3, 'completion_date' => '2015-10-01',
+			'description' => "This console implementation of TicTacToe was my college introduction to the C++ language. Part of the grade was awarded for having a computer player (or 'AI') that could not be beaten. My AI used the Minimax algorithm to search the entire game tree, and make an optimal move assuming it was playing against an ideal opponent."]);
+		$zombies = Project::create([
+			'name' => 'Zombie Apocalypse Predator/Prey Simulation', 'alias' => 'zombies', 'github_link' => "https://github.com/arbuthnott/CPPVisualStudio/tree/master/Zombies",
+			'importance' => 3, 'completion_date' => '2015-12-01',
+			'description' => "This was a C++ console application that ran a 'Zombie-Apocalypse' simulation on a 2D grid. Different ASCII characters and console colors were used to represent humans and zombies, and at each iteration the zombies attempted to catch the humans, and the humans to escape, following various rules.  Some credit was given for tweaking to rules to make the simulation last longer under certain starting conditions."]);
+		$laravelCms = Project::create([
+			'name' => 'Laravel Content Management System', 'alias' => 'laravelCms', 'github_link' => "https://github.com/arbuthnott/inet2005-kc",
+			'importance' => 5, 'completion_date' => '2015-12-15',
+			'description' => "This was the final project for my Web Application Development course, created cooperatively with my fellow student Kristina Lall. We used the laravel Php framework through PhpStorm to create a full front-and-back-end Content Management System. The Application includes multiple user-permission levels, and a web interface for creating pages, page areas and page contents that appear on the front end."]);
+		$laravelBlog = Project::create([
+			'name' => 'Laravel Blog Application', 'alias' => 'laravelBlog', 'github_link' => "https://github.com/arbuthnott/inet2005-ca/tree/master/Lab8",
+			'other_link' => "https://laracasts.com/series/laravel-5-fundamentals", 'importance' => 3, 'completion_date' => '2015-11-18',
+			'description' => "This was a first attempt at a Laravel Application: a Blog with complete Create/Update/Delete functionality, created along with a Laracasts tutorial. The project introduced me to Laravels Object Relational Model 'Eloquent', the cmd tools artisand and tinker, routing, and database seeding and migration."]);
+		$mvc = Project::create([
+			'name' => 'Model/View/Controller Web Application', 'alias' => 'mvc', 'github_link' => "https://github.com/arbuthnott/inet2005-ca/tree/master/Lab7",
+			'importance' => 3, 'completion_date' => '2015-11-08',
+			'description' => "This project served as in introduction to MVC Architecture, and was coded entirely from scratch (no templates or frameworks). Full Create/Update/Delete functionality was included, accessing different methods of a custom controller based on the get/post parameters found at a single site url."]);
+		$life = Project::create([
+			'name' => "Conway's Game of Life for Android", 'alias' => 'life', 'github_link' => "https://github.com/arbuthnott/AndroidStudio/tree/master/Jareds_Machine",
+			'importance' => 3, 'completion_date' => '2015-11-30',
+			'description' => "This project implements Conway's Game of Life as an Android App. It was created for a Project Management Class in collaboration with group members Jared Everett, Aaron Gallant and Ryan Hackett. The app itself is created using Java in Android Studio, but much of the project focus was on using Agile and Scrum methodologies - the project consisted of two well documented Sprints, and my role included much of organizational work (creating and updating burndown charts, etc)."]);
+		$quizzer = Project::create([
+			'name' => 'Quizzer for Android', 'alias' => 'quizzer', 'github_link' => "https://github.com/arbuthnott/AndroidStudio/tree/master/Quizzer",
+			'importance' => 0, 'completion_date' => '2015-10-12',
+			'description' => "This was my first multi-Activity Android App. The Quizzer App would use a list of term/definition pairs from a resource file, and use them to randomly generate a multiple choice quiz. The question selection, order, incorrect answers and correct answer placement are rerandomized every play, which made this App a good study tool for my college classes."]);
+		$trailers = Project::create([
+			'name' => 'Streaming Youtube Movie Trailers for Android', 'alias' => 'trailers', 'github_link' => "https://github.com/arbuthnott/AndroidStudio/tree/master/MovieTrailers",
+			'importance' => 0, 'completion_date' => '2015-11-15',
+			'description' => "This Android App was able to stream Youtube content to a video player within the app. The player was embedded in a custom Activity, not just a wrapper for the default Youtube viewer. Making this work involved generating a Youtube API key, and using some of their packages. The app maintained a stored list of trailers that the user could manage, rate, or watch when connected to the internet."]);
+		$pvp = Project::create([
+			'name' => 'Fantasy Battle for Java Swing', 'alias' => 'pvp', 'github_link' => "https://github.com/arbuthnott/JavaEclipse/tree/master/Assign3_PvPClasses",
+			'importance' => 2, 'completion_date' => '2015-03-02',
+			'description' => "This project was a battle-simulation game written in Java with a Swing user interface. A player could choose a human or automated opponent, then purchase from a list of randomly generated armaments and mythical creatures (dragons, unicorns, etc) to aid in the battle. Winnings from a battle could be used to purchase further armaments or helpers. Using some of the same battle functionality for 'players' and 'helpers' was an excersize in subclassing and polymorphism."]);
+		$screensaver = Project::create([
+			'name' => 'Demo ScreenSaver - Java Swing Animation', 'alias' => 'screensaver', 'github_link' => "https://github.com/arbuthnott/JavaEclipse/tree/master/Assign5_ScreenSaver_ChrisArbuthnott",
+			'importance' => 3, 'completion_date' => '2015-04-10',
+			'description' => "This college Java Swing project was an excersize in animation. The requirements were to implement some linear 'bouncing ball' motions and use collision detection, but I went a little further. My implementation used gradients, gradual color fades, and a scatter response to clicks in the ball display. I also created a polygon display that implemented polygons that continuously rotated about their centers, and oscillated in shape somewhat (the result with many on the screen resembled three-dimensional windblown litter)."]);
+		
+		// Extra-Curricular Projects :)
+		$sliderpuzzle = Project::create([
+			'name' => 'JavaScript Kids Slider Puzzle', 'alias' => 'sliderpuzzle', 'other_link' => "http://arbuthnott.byethost15.com/sliderpuzzle.html",
+			'importance' => 4, 'completion_date' => '2011-01-07',
+			'description' => "An early project of mine, created just after learning Html DOM and Javascript, this is a 16 tile 'slider-puzzle' with a changable image. This one is online at an old website of mine, so you can play it if you click the link."]);
+		$palette = Project::create([
+			'name' => 'Palette Chooser WebPage', 'alias' => 'palette', 'other_link' => "http://arbuthnott.byethost15.com/palette.htm",
+			'importance' => 3, 'completion_date' => '2011-02-07',
+			'description' => "I created this early project to use as an aid choosing colors for web projects. It uses javascript to randomly display colors, then allows them to selected, adjusted, and viewed side-by-side from the browser. This page is online at an old website of mine, so you can test it at the link."]);
+		$planet = Project::create([
+			'name' => 'Planet Trivia WebPage', 'alias' => 'planet', 'other_link' => "http://arbuthnott.byethost15.com/planet.htm",
+			'importance' => 3, 'completion_date' => '2011-04-07',
+			'description' => "This is an old WebPage I created for my (then) 3 year old son to play with. It's a set of trivia questions about our solar system wrapped up in a game-like interface, all implemented using javascript and css."]);
+		$fishies = Project::create([
+			'name' => 'FishPond Game using Python and SimpleGui', 'alias' => 'fishies', 'other_link' => "http://www.codeskulptor.org/#user28_wBpHroOrjnRy2A1.py",
+			'importance' => 4, 'completion_date' => '2012-04-10',
+			'description' => "This game, written using Python and SimpleGui library, uses the same movement algorithms as the fish/shapes on this website. It was written for an online course that used the 'CodeSkulptor' website. If you click on the link, you can see the source on CodeSkulptor, and clicking Play will allow you to play the game in your browser."]);
+		$euler = Project::create([
+			'name' => 'Project Euler Problem Solver, Level 2', 'alias' => 'euler', 'other_link' => "https://projecteuler.net/archives",
+			'importance' => 3, 'completion_date' => '2013-01-01',
+			'description' => "Euler was a famous mathematician, and Project Euler is a (somewhat dated) online community where users solve problems using math, algorithm design, and code. Problems like 'find the millionth prime number' are posed on the site, and your progress is updated when you solve a problem. I have solved 50 problems at Project Euler. You can browse the problems they offer at the provided link."]);
+		$battlechess = Project::create([
+			'name' => 'Battle-Chess for Java Swing', 'alias' => 'battlechess', 'github_link' => "https://github.com/arbuthnott/JavaEclipse/tree/master/BoardGame",
+			'importance' => 3, 'completion_date' => '2016-01-03',
+			'description' => "This swing game is a board-game invented by my young son and I. It is a little like chess, but the pieces can all strike at a distance in different ways, and can withstand different numbers of hits before they are 'taken'. We set out to invent the rules and play this on a physical board, but some of the calculation and data details made it a good fit for an electronic game. When time permits, I intend to create an AI player, and implement the game as an Android App."]);
+		
+		
+		/////////////////////////////////////
+		// Attach relevant courses and skills
+		/////////////////////////////////////
+		$courses = Course::lists('id', 'alias');
+		$skills = Skill::lists('id', 'alias');
+		
+		$bookstore->courses()->attach($courses['j2ee']);
+		$bookstore->skills()->attach([$skills['j2ee'], $skills['java'], $skills['html'], $skills['css'], $skills['mvc']]);
+		$ttt->courses()->attach($courses['cplus']);
+		$ttt->skills()->attach([$skills['cplus'], $skills['algorithm'], $skills['vstudio']]);
+		$zombies->courses()->attach($courses['cplus']);
+		$zombies->skills()->attach([$skills['cplus'], $skills['algorithm'], $skills['vstudio']]);
+		
+		$laravelCms->courses()->attach($courses['php']);
+		$laravelCms->skills()->attach([$skills['laravel'], $skills['php'], $skills['phpstorm'], $skills['mvc'], $skills['database'], $skills['css'], $skills['bash'], $skills['git']]);
+		$laravelBlog->courses()->attach($courses['php']);
+		$laravelBlog->skills()->attach([$skills['laravel'], $skills['php'], $skills['phpstorm'], $skills['elearn'], $skills['mvc']]);
+		$mvc->courses()->attach($courses['php']);
+		$mvc->skills()->attach([$skills['php'], $skills['mvc'], $skills['phpstorm'], $skills['git']]);
+		
+		$life->courses()->attach($courses['android']);
+		$life->skills()->attach([$skills['agile'], $skills['scrum'], $skills['android'], $skills['uml'], $skills['comm']]);
+		$quizzer->courses()->attach($courses['android']);
+		$quizzer->skills()->attach([$skills['android'], $skills['java'], $skills['ui']]);
+		$trailers->courses()->attach($courses['android']);
+		$trailers->skills()->attach([$skills['android'], $skills['java'], $skills['ui'], $skills['sqlite']]);
+		
+		$pvp->courses()->attach($courses['oopIntro']);
+		$pvp->skills()->attach([$skills['java'], $skills['eclipse'], $skills['oop'], $skills['uml']]);
+		$screensaver->courses()->attach($courses['oopIntro']);
+		$screensaver->skills()->attach([$skills['java'], $skills['eclipse'], $skills['oop'], $skills['math'], $skills['algorithm']]);
+		
+		$sliderpuzzle->skills()->attach([$skills['js'], $skills['css'], $skills['html'], $skills['math']]);
+		$palette->skills()->attach([$skills['js'], $skills['css'], $skills['html'], $skills['ui']]);
+		$planet->skills()->attach([$skills['js'], $skills['css'], $skills['html']]);
+		
+		$fishies->courses()->attach([$courses['python1'], $courses['python2']]);
+		$fishies->skills()->attach([$skills['python'], $skills['math'], $skills['algorithm'], $skills['ui']]);
+		$euler->skills()->attach([$skills['math'], $skills['algorithm'], $skills['java']]);
+		$battlechess->skills()->attach([$skills['java'], $skills['eclipse']]);
 		//
+
 	}
 }
 
 class CourseTableSeeder extends Seeder {
 	public function run() {
+		// non-NSCC
+		$python1 = Course::create(['code' => 'PYTHON I', 'name' => 'Intro to Interactive Programming in Python', 'alias' => 'python1',
+			'importance' => 3, 'grade' => 97.2, 'completion_date' => '2013-11-19',
+			'topic_list' => 'Python Language, CokeSkulptor site, Objects, GUI Libraries, Game Mechanics',
+			'description' => "This is an online course from Rice University offered by Coursera.org. The course teaches Python from scratch in an online editor you can find at CodeSkulptor.org."]);
+		$python2 = Course::create(['code' => 'PYTHON II', 'name' => 'Principles of Computing (in Python)', 'alias' => 'python2',
+			'importance' => 3, 'grade' => 100.0, 'completion_date' => '2014-04-19',
+			'topic_list' => 'Python Language, Game Algorithms, MiniMax method, Breadth vs Depth First Search',
+			'description' => "A second online course in Python from Rice University, via Coursera.org. This course got deeper into some heavy computing, creating AI game opponents that search game trees, etc."]);
+		
+		
 		// year 1, term 1:
 		$web = Course::create(['code' => 'WEBD 1000', 'name' => 'Website Development', 'alias' => 'web',
 			'importance' => 0, 'grade' => 98.0, 'completion_date' => '2014-12-19',
@@ -68,9 +196,6 @@ class CourseTableSeeder extends Seeder {
 			'topic_list' => 'Unified Modeling Language, Software Development Lifecycle, Use Cases, Test Cases, Sequence Diagrams, Class Diagrams',
 			'description' => "In this course I learned the Unified Modeling Language suite of documents, including testing docs, use cases, and class and sequence diagrams. Agile methodologies and scrum were touched on."]);
 		
-		
-		
-		
 		// year 2, term 1:
 		$android = Course::create(['code' => 'APPD 2000', 'name' => 'Android Application Development', 'alias' => 'android',
 			'importance' => 0, 'grade' => 97.0, 'completion_date' => '2015-12-18',
@@ -98,8 +223,11 @@ class CourseTableSeeder extends Seeder {
 		////////////////////////////////////
 		$skills = Skill::lists('id', 'alias');
 		
+		$python1->skills()->attach([$skills['python'], $skills['math'], $skills['algorithm']]);
+		$python2->skills()->attach([$skills['python'], $skills['math'], $skills['algorithm']]);
+		
 		$android->skills()->attach([$skills['java'], $skills['android'], $skills['sqlite'], $skills['ui']]);
-		$php->skills()->attach([$skills['php'], $skills['laravel'], $skills['js'], $skills['database'], $skills['git'], $skills['mvc'], $skills['phpstorm'], $skills['bash']]);
+		$php->skills()->attach([$skills['php'], $skills['laravel'], $skills['js'], $skills['database'], $skills['git'], $skills['mvc'], $skills['phpstorm'], $skills['bash'], $skills['ajax']]);
 		$management->skills()->attach([$skills['agile'], $skills['scrum'], $skills['uml'], $skills['office'], $skills['comm'], $skills['elearn']]);
 		$cplus->skills()->attach([$skills['cplus'], $skills['vstudio'], $skills['algorithm'], $skills['oop'], $skills['uml'], $skills['elearn']]);
 		$j2ee->skills()->attach([$skills['j2ee'], $skills['java'], $skills['eclipse'], $skills['mvc'], $skills['elearn']]);
@@ -135,6 +263,8 @@ class SkillsTableSeeder extends Seeder {
 							   'experience' => "I've been creating my own css stylesheets for several years.  Though I am familiar with frameworks like bootstrap, I prefer the fresh appearance of creating custom css for each project."]);
 		$jquery = Skill::create(['name' => 'jQuery', 'importance' => 5, 'alias' => 'jquery', 'description' => 'The essential JavaScript enhancement package',
 							   'experience' => "I enjoy using core jquery along with some minor mathematics to create animations and effects.  I'm also familiar with use of existing jQuery packages."]);
+		$ajax = Skill::create(['name' => 'Ajax', 'importance' => 4, 'alias' => 'ajax', 'description' => 'A javascript enhancement to access server-side information, but initiated by client-side code.',
+							   'experience' => "I have some experience using Ajax to fetch database records, or trigger php scripts from within my javascript code. We had some small introductions to this in my college courses, and I also made use of it over my summer Work-term."]);
 		$sql = Skill::create(['name' => 'SQL', 'importance' => 5, 'alias' => 'sql', 'description' => 'The core database language',
 							   'experience' => "I can write reasonably complicated SQL queries (including functions, joins, etc) to extract readable data from a database.  I first learned SQL several years ago and have had several courses use it at NSCC."]);
 		$bash = Skill::create(['name' => 'Bash', 'importance' => 5, 'alias' => 'bash', 'description' => 'Terminal commands for linux machines, including simple scripting',
@@ -199,14 +329,15 @@ class SkillsTableSeeder extends Seeder {
 							   'experience' => "I am familiar with Scrum Project Methodology, and understand the requirements of the various roles and artifacts."]);
 		
 		// Now attach some related skills.
-		$php->relatedSkills()->attach([$laravel->id, $phpstorm->id, $mysql->id, $mvc->id]);
+		$php->relatedSkills()->attach([$laravel->id, $phpstorm->id, $mysql->id, $mvc->id, $ajax->id]);
 		$java->relatedSkills()->attach([$j2ee->id, $eclipse->id, $oop->id, $android->id]);
 		$cplus->relatedSkills()->attach([$vstudio->id, $oop->id, $algorithm->id]);
 		$python->relatedSkills()->attach([$vstudio->id, $oop->id]);
-		$js->relatedSkills()->attach([$jquery->id, $html->id, $css->id, $ui->id]);
+		$js->relatedSkills()->attach([$jquery->id, $html->id, $css->id, $ui->id, $ajax->id]);
 		$html->relatedSkills()->attach([$css->id, $js->id, $ui->id]);
 		$css->relatedSkills()->attach([$html->id, $js->id, $jquery->id, $ui->id]);
-		$jquery->relatedSkills()->attach([$js->id, $html->id, $css->id, $math->id]);
+		$jquery->relatedSkills()->attach([$js->id, $html->id, $css->id, $math->id, $ajax->id]);
+		$ajax->relatedSkills()->attach([$js->id, $jquery->id, $php->id]);
 		$sql->relatedSkills()->attach([$database->id, $mysql->id, $sqlite->id]);
 		$bash->relatedSkills()->attach([$putty->id, $vim->id, $git->id, $laravel->id]);
 		

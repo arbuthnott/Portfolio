@@ -13,5 +13,9 @@ class Skill extends Model {
 	public function courses() {
 		return $this->belongsToMany('App\Course');
 	}
+	
+	public function projects() {
+		return $this->belongsToMany('App\Project');
+	}
 
 }

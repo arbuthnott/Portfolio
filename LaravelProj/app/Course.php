@@ -9,5 +9,9 @@ class Course extends Model {
     public function skills() {
         return $this->belongsToMany('App\Skill');
     }
+	
+	public function projects() {
+		return $this->belongsToMany('App\Project');
+	}
 
 }
