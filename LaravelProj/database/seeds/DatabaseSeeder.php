@@ -99,7 +99,18 @@ class ProjectTableSeeder extends Seeder {
 			'name' => 'Battle-Chess for Java Swing', 'alias' => 'battlechess', 'github_link' => "https://github.com/arbuthnott/JavaEclipse/tree/master/BoardGame",
 			'importance' => 3, 'completion_date' => '2016-01-03',
 			'description' => "This swing game is a board-game invented by my young son and I. It is a little like chess, but the pieces can all strike at a distance in different ways, and can withstand different numbers of hits before they are 'taken'. We set out to invent the rules and play this on a physical board, but some of the calculation and data details made it a good fit for an electronic game. When time permits, I intend to create an AI player, and implement the game as an Android App."]);
-		
+		$scbugs = Project::create([
+			'name' => 'Bug Team at SimplyCast', 'alias' => 'scbugs', 'other_link' => "https://www.simplycast.com/",
+			'importance' => 3, 'completion_date' => '2015-08-28',
+			'description' => "During my 4 month Co-op term at SimplyCast, I spent some time on the Bug Team, finding reported bugs in Phabricator, their ticketing system, claiming the bugs and attempting to find the sources of the bugs and implement fixes. The fixes involved extensive work in Php, Javascript, an SQL Database, and several Javascript libraries (jQuery UI for example). Tracking the bugs in the extensive SimplyCast Web Application was challenging, but I'm happy to report I had both challenges and some success."]);
+		$scplan = Project::create([
+			'name' => 'Design of Gamification Backend at SimplyCast', 'alias' => 'scplan', 'other_link' => "https://www.simplycast.com/",
+			'importance' => 10, 'completion_date' => '2015-08-28',
+			'description' => "I acted as 'Gamification Analyst' during my 4 month Co-op term at SimplyCast. An important part of the role was the theoretical design of how the Gamification would work: what data would be needed, how would it be catalogued and accessed, etc. One desired outcome was a recommendation system that would make reasonable suggestions about what features of the Web-App users should look at based on what they had previously used. I was successful in designing a database, and suggestion algorithms that would meet these goals, and store data that would later allow analysis of suggestion success. I was leading, not assisting in these designs, and I created the algorithms from scratch."]);
+		$scimplement = Project::create([
+			'name' => 'Implementation of Gamification Backend at SimplyCast', 'alias' => 'scimplement', 'other_link' => "https://www.simplycast.com/",
+			'importance' => 9, 'completion_date' => '2015-08-28',
+			'description' => "I acted as 'Gamification Analyst' during my 4 month Co-op term at SimplyCast. After designing algorithms for data-collection and suggestion of Web-App features to users, I was able to implement the prototype on a large portion of the live application. This involved triggering data-recording in a MySQL Database I designed and created, and writing scripts that could access and collate that data into suggestions or reports. Scalability was a factor, as data recording was triggered several thousand times each day. Inserting the triggers properly involved lots of work in Php and Javascript, as well as work with the APIs of third-party plugins, such as CK-Editor. Following implementation, data collection went on successfully for a month or so before the end of my Co-op term."]);		
 		
 		/////////////////////////////////////
 		// Attach relevant courses and skills
@@ -141,6 +152,10 @@ class ProjectTableSeeder extends Seeder {
 		$fishies->skills()->attach([$skills['python'], $skills['math'], $skills['algorithm'], $skills['ui']]);
 		$euler->skills()->attach([$skills['math'], $skills['algorithm'], $skills['java']]);
 		$battlechess->skills()->attach([$skills['java'], $skills['eclipse']]);
+		
+		$scbugs->skills()->attach([$skills['php'], $skills['js'], $skills['jquery'], $skills['phab'], $skills['git'], $skills['bash']]);
+		$scplan->skills()->attach([$skills['algorithm'], $skills['math'], $skills['database'], $skills['php']]);
+		$scimplement->skills()->attach([$skills['php'], $skills['js'], $skills['jquery'], $skills['git'], $skills['mysql'], $skills['sql']]);
 		//
 
 	}
@@ -157,7 +172,14 @@ class CourseTableSeeder extends Seeder {
 			'importance' => 3, 'grade' => 100.0, 'completion_date' => '2014-04-19',
 			'topic_list' => 'Python Language, Game Algorithms, MiniMax method, Breadth vs Depth First Search',
 			'description' => "A second online course in Python from Rice University, via Coursera.org. This course got deeper into some heavy computing, creating AI game opponents that search game trees, etc."]);
-		
+		$bachelors = Course::create(['code' => 'BSc Mathematics', 'name' => 'Bachelors Degree from University of Saskatchewan', 'alias' => 'bachelors',
+			'importance' => 3,'completion_date' => '2000-04-30',
+			'topic_list' => 'Advanced Linear Algebra, Multivariate Calculus, Statistics Survey, Galois Theory, Mathematical Induction',
+			'description' => "I have a 4 year Bachelors Degree from the University of Saskatchewan, majoring in Mathematics. This education gave me my foundation in general numeracy and logic that I find so helpful in day-to-day software development, and layed the groundwork for my subsequent Masters Degree."]);
+		$masters = Course::create(['code' => 'MPMath', 'name' => 'Masters Degree - Pure Math Dept at University of Waterloo', 'alias' => 'masters',
+			'importance' => 8, 'completion_date' => '2003-04-30',
+			'topic_list' => 'Mathematical Logic, Combinatorics and Large Number Factoring, Algorithm Analysis, Graph Theory, Axiomatization Normalization and Decidability',
+			'description' => "My two year Masters was at the Pure Mathematics dept of Canada's best Math school the University of Waterloo. During my degree I touched on some topics of direct interest in Computer Science, such as Cryptography and large data-set analysis. However, my work focussed on very abstract logical structures, which gives me facility (and even affection) for algorithmic techniques like Recursion, Weighted Randomization, Asymptotic or Linear Approach, Parametrization, etc. Though I chose to leave academic mathematics after this degree, I finished it with Distinction, and I'm able to use skills learned there as a resource."]);		
 		
 		// year 1, term 1:
 		$web = Course::create(['code' => 'WEBD 1000', 'name' => 'Website Development', 'alias' => 'web',
@@ -241,6 +263,9 @@ class CourseTableSeeder extends Seeder {
 		$web->skills()->attach([$skills['html'], $skills['css'], $skills['js']]);
 		$network->skills()->attach([$skills['elearn'], $skills['math'], $skills['algorithm']]);
 		$dbIntro->skills()->attach([$skills['office'], $skills['algorithm'], $skills['vmware']]);
+		
+		$bachelors->skills()->attach([$skills['math'], $skills['algorithm'], $skills['comm']]);
+		$masters->skills()->attach([$skills['math'], $skills['algorithm'], $skills['comm']]);
 	}
 }
 
