@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    var RIPPLE_RAD = 100;
-    var RIPPLE_GAP = 30;
-    var RIPPLE_FRAMERATE = 10;
-    var RIPPLE_LIFESPAN = 5000;
+    var RIPPLE_RAD = 120; // maximum visible ripple radius
+    var RIPPLE_GAP = 40; // diam difference between concentric ripples
+    var RIPPLE_FRAMERATE = 12; // ms between redraws
+    var RIPPLE_LIFESPAN = 5000; // in ms
     var rgbs = ['0,255,255', '180,90,180', '255,255,0', '255,255,0', '0,255,0', '255,100,0'];
     
     $('.animFrame').on('click', function(e) {

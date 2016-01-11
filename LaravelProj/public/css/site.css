@@ -1,3 +1,7 @@
+/************************************
+ * Styles for whole site
+ ***********************************/
+
 .fullScreen {
     width: 100%;
     min-height: 90vh;
@@ -117,14 +121,20 @@ article.floatingRight p em {
     text-shadow: 1px 1px 4px black;
 }
 
-nav.slideButton {
+nav.sideNav {
     width: 240px;
+    height: 100%;
+    float: left;
+    margin-top: 4px;
+}
+
+div.slideButton {
+    width: 100%;
     padding: 4px 0px;
     text-align: center;
     color: white;
     text-shadow: 1px 1px 4px black;
     font-size: 18px;
-    margin-top: 24px;
     cursor: default;
     
     -webkit-border-radius: 4px;
@@ -137,14 +147,14 @@ nav.slideButton {
     background: -moz-linear-gradient(center top, #0096FF, #005DFF);
 }
 
-nav.slideButton:hover {
+div.slideButton:hover {
     background: #005DFF;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0033FF), to(#005DFF));
     background: -webkit-linear-gradient(0% 0%, 0% 100%, from(#0033FF), to(#005DFF));
     background: -moz-linear-gradient(center top, #0033FF, #005DFF);
 }
 
-nav.slideButton+ul {
+div.slideButton+ul {
     display: none;
     margin-top: 10px;
     font-size: 18px;
@@ -156,19 +166,19 @@ nav.slideButton+ul {
     padding-left: 0px;
 }
 
-nav.slideButton+ul li {
+div.slideButton+ul li {
     border: 1px solid white;
     margin: 16px 0px;
 }
 
-nav.slideButton+ul a {
+div.slideButton+ul a {
     display: inline-block;
     width: 100%;
     height: 100%;
     padding-left: 16px;
 }
 
-nav.slideButton+ul a:hover {
+div.slideButton+ul a:hover {
     text-decoration: none;
     background-color: rgba(255,255,255,0.1);
     color: white;

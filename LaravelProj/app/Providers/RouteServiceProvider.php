@@ -2,6 +2,9 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use App\Skill;
+use App\Course;
+use App\Project;
 
 class RouteServiceProvider extends ServiceProvider {
 
@@ -24,7 +27,16 @@ class RouteServiceProvider extends ServiceProvider {
 	{
 		parent::boot($router);
 
-		//
+		// bind skill, course, and project wildcards the the alias in the database.
+		$router->bind('skill', function($alias) {
+            return Skill::where('alias', $alias)->firstOrFail();
+        });
+		$router->bind('course', function($alias) {
+            return Course::where('alias', $alias)->firstOrFail();
+        });
+		$router->bind('project', function($alias) {
+            return Project::where('alias', $alias)->firstOrFail();
+        });
 	}
 
 	/**

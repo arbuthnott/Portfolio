@@ -2,7 +2,6 @@
 
 @section('endOfHead')
     <title>Chris Arbuthnott</title>
-    {!! Html::style('css/animStyle.css') !!}
 @endsection
 
 @section('content')
@@ -11,10 +10,8 @@
             <div class="fishy"></div>
         @endfor
         <div class="headerButton" id="moreFish">More Fish!</div>
-        <div class="headerButton" id="linkedIn">Linked In</div>
-        <div class="headerButton" id="github">Github</div>
-        <h1>Chris Arbuthnott <span class="subtitle">// developer</span></h1>
-        <hr />
+        @include('resume.partials.header')
+        
         <article class="floatingRight">
             <h3>What am I looking at?</h3>
             <hr />
@@ -36,19 +33,12 @@
                 PS - try clicking on the background!
             </h3>
         </article>
-        <nav class="slideButton">
-            About Me &nbsp;&nbsp;&dtri;
-        </nav>
-        <ul>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+            
+        @include('resume.partials.sidenav', ['homepage' => true])
     </div>
 @endsection
 
 @section('endOfBody')
     {!! Html::script('js/fish.js') !!}
     {!! Html::script('js/ripple.js') !!}
-    {!! Html::script('js/resume.js') !!}
 @endsection

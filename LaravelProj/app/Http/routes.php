@@ -13,9 +13,16 @@
 
 Route::get('/', 'ResumeController@index');
 
-Route::get('home', 'HomeController@index');
+Route::get('skills', 'SkillController@index');
+Route::get('skills/{skill}', 'SkillController@show');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::get('education', 'CourseController@index');
+Route::get('education/{course}', 'CourseController@show');
+
+Route::get('projects', 'ProjectController@index');
+Route::get('projects/{project}', 'ProjectController@show');
+
+//Route::controllers([
+//	'auth' => 'Auth\AuthController',
+//	'password' => 'Auth\PasswordController',
+//]);
