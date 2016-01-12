@@ -272,85 +272,85 @@ class CourseTableSeeder extends Seeder {
 class SkillsTableSeeder extends Seeder {
 	public function run() {
 		// Coding languages
-		$php = Skill::create(['name' => 'Php',	'importance' => 8, 'alias' => 'php', 'description' => 'A web coding language',
+		$php = Skill::create(['name' => 'Php', 'type' => 'language', 'importance' => 8, 'alias' => 'php', 'description' => 'A web coding language',
 							  'experience' => "I've dabbled in Php since 2012.  Since then I've had several courses, and summer workterm primarily devoted to Php.  This website is mainly written in Php."]);
-		$java = Skill::create(['name' => 'Java', 'importance' => 8, 'alias' => 'java', 'description' => 'The Java programming language',
+		$java = Skill::create(['name' => 'Java', 'type' => 'language', 'importance' => 8, 'alias' => 'java', 'description' => 'The Java programming language',
 							   'experience' => "The first language I learned, I have since had extensive coursework using Java for various purposes, including J2EE, Android development and Swing Applications."]);
-		$cplus = Skill::create(['name' => 'C++', 'importance' => 8, 'alias' => 'cplus', 'description' => 'The C++ programming language',
+		$cplus = Skill::create(['name' => 'C++', 'type' => 'language', 'importance' => 8, 'alias' => 'cplus', 'description' => 'The C++ programming language',
 							   'experience' => "I've used C++ for foundational coding throughout my entire final year at Nova Scotia Community College."]);
-		$python = Skill::create(['name' => 'Python', 'importance' => 5, 'alias' => 'python', 'description' => 'A fasionable, readable programming language',
+		$python = Skill::create(['name' => 'Python', 'type' => 'language', 'importance' => 5, 'alias' => 'python', 'description' => 'A fasionable, readable programming language',
 							   'experience' => "Python is my favorite language. I taught Python to myself, and furthered my knowledge by completing several Coursera courses run by the Faculty and Rice University."]);
-		$js = Skill::create(['name' => 'JavaScript', 'importance' => 8, 'alias' => 'js', 'description' => 'The client-side scripting language for browsers',
+		$js = Skill::create(['name' => 'JavaScript', 'type' => 'language', 'importance' => 8, 'alias' => 'js', 'description' => 'The client-side scripting language for browsers',
 							   'experience' => "I have a long history of dabbling with Javascript (and its extentions and libraries) to enhance personal web projects.  Javascript has been used and taught in several of my college courses."]);
-		$html = Skill::create(['name' => 'HTML', 'importance' => 2, 'alias' => 'html', 'description' => 'Hypertext Markup Language - the XML based web language',
+		$html = Skill::create(['name' => 'HTML', 'type' => 'language', 'importance' => 2, 'alias' => 'html', 'description' => 'Hypertext Markup Language - the XML based web language',
 							   'experience' => "I am comfortable with creating my own Html, or working with templating engines or dynamic creation."]);
-		$css = Skill::create(['name' => 'CSS', 'importance' => 2, 'alias' => 'css', 'description' => 'The core web styling language',
+		$css = Skill::create(['name' => 'CSS', 'type' => 'language', 'importance' => 2, 'alias' => 'css', 'description' => 'The core web styling language',
 							   'experience' => "I've been creating my own css stylesheets for several years.  Though I am familiar with frameworks like bootstrap, I prefer the fresh appearance of creating custom css for each project."]);
-		$jquery = Skill::create(['name' => 'jQuery', 'importance' => 5, 'alias' => 'jquery', 'description' => 'The essential JavaScript enhancement package',
+		$jquery = Skill::create(['name' => 'jQuery', 'type' => 'language', 'importance' => 5, 'alias' => 'jquery', 'description' => 'The essential JavaScript enhancement package',
 							   'experience' => "I enjoy using core jquery along with some minor mathematics to create animations and effects.  I'm also familiar with use of existing jQuery packages."]);
-		$ajax = Skill::create(['name' => 'Ajax', 'importance' => 4, 'alias' => 'ajax', 'description' => 'A javascript enhancement to access server-side information, but initiated by client-side code.',
+		$ajax = Skill::create(['name' => 'Ajax', 'type' => 'language', 'importance' => 4, 'alias' => 'ajax', 'description' => 'A javascript enhancement to access server-side information, but initiated by client-side code.',
 							   'experience' => "I have some experience using Ajax to fetch database records, or trigger php scripts from within my javascript code. We had some small introductions to this in my college courses, and I also made use of it over my summer Work-term."]);
-		$sql = Skill::create(['name' => 'SQL', 'importance' => 5, 'alias' => 'sql', 'description' => 'The core database language',
+		$sql = Skill::create(['name' => 'SQL', 'type' => 'language', 'importance' => 5, 'alias' => 'sql', 'description' => 'The core database language',
 							   'experience' => "I can write reasonably complicated SQL queries (including functions, joins, etc) to extract readable data from a database.  I first learned SQL several years ago and have had several courses use it at NSCC."]);
-		$bash = Skill::create(['name' => 'Bash', 'importance' => 5, 'alias' => 'bash', 'description' => 'Terminal commands for linux machines, including simple scripting',
+		$bash = Skill::create(['name' => 'Bash', 'type' => 'language', 'importance' => 5, 'alias' => 'bash', 'description' => 'Terminal commands for linux machines, including simple scripting',
 							   'experience' => "I can manage myself in most bash shells, including linux machines with no desktop.  My Summer workterm involves substantial work in a large folder structure accessed only via terminal and bash."]);
 		
 		// Software and platforms
-		$office = Skill::create(['name' => 'Microsoft Office', 'alias' => 'office', 'description' => 'Office products including Word, Excel, Access, Powerpoint, Visio and MS Project',
+		$office = Skill::create(['name' => 'Microsoft Office', 'type' => 'software', 'alias' => 'office', 'description' => 'Office products including Word, Excel, Access, Powerpoint, Visio and MS Project',
 							   'experience' => "My time at NSCC has expanded my MS Office Experience from only Word and Excel to include Access, Visio, MS Project and others."]);
-		$eclipse = Skill::create(['name' => 'Eclipse IDE', 'importance' => 5, 'alias' => 'eclipse', 'description' => 'A development environment',
+		$eclipse = Skill::create(['name' => 'Eclipse IDE', 'type' => 'software', 'importance' => 5, 'alias' => 'eclipse', 'description' => 'A development environment',
 							   'experience' => "I have extensive time writing Java in Eclipse, including console or swing applications, and management of a Web-Application through an Apache server."]);
-		$j2ee = Skill::create(['name' => 'J2EE/Eclipse Mars', 'importance' => 5, 'alias' => 'j2ee', 'description' => 'Java Enterprise Edition, for creating Java Web applications in the Eclipse environment',
+		$j2ee = Skill::create(['name' => 'J2EE/Eclipse Mars', 'type' => 'software', 'importance' => 5, 'alias' => 'j2ee', 'description' => 'Java Enterprise Edition, for creating Java Web applications in the Eclipse environment',
 							   'experience' => "I have experience attaching my Eclipse IDE to an Apach Server and managing several Web Applications through it, including multiple Servlets, Filters, etc."]);
-		$vstudio = Skill::create(['name' => 'Visual Studio', 'importance' => 5, 'alias' => 'vstudio', 'description' => 'A development environment',
+		$vstudio = Skill::create(['name' => 'Visual Studio', 'type' => 'software', 'importance' => 5, 'alias' => 'vstudio', 'description' => 'A development environment',
 							   'experience' => "I have used Visual Studio for several large projects and in multiple languages including C++ and Python."]);
-		$android = Skill::create(['name' => 'Android Studio', 'importance' => 5, 'alias' => 'android', 'description' => 'The official Android development environment',
+		$android = Skill::create(['name' => 'Android Studio', 'type' => 'software', 'importance' => 5, 'alias' => 'android', 'description' => 'The official Android development environment',
 							   'experience' => "I have used Android Studio to create simple Apps, and successfully run them in both created Emulators and physical devices."]);
-		$phpstorm = Skill::create(['name' => 'Php Storm', 'importance' => 5, 'alias' => 'phpstorm', 'description' => 'An development environment for Php applications',
+		$phpstorm = Skill::create(['name' => 'Php Storm', 'type' => 'software', 'importance' => 5, 'alias' => 'phpstorm', 'description' => 'An development environment for Php applications',
 							   'experience' => "I have experience using PhpStorm to create Php projects from scratch, and also composer Laravel installations."]);
-		$komodo = Skill::create(['name' => 'Komodo IDE', 'alias' => 'komodo', 'description' => 'A lightweight developement environment good for remote access',
+		$komodo = Skill::create(['name' => 'Komodo IDE', 'type' => 'software', 'alias' => 'komodo', 'description' => 'A lightweight developement environment good for remote access',
 							   'experience' => "I use the Komodo IDE when I need a graphical editor for projects stored remotely on a machine with no graphical desktop."]);
-		$putty = Skill::create(['name' => 'PuTTY', 'importance' => 5, 'alias' => 'putty', 'description' => 'A secure shell / telnet client for Windows',
+		$putty = Skill::create(['name' => 'PuTTY', 'type' => 'software', 'importance' => 5, 'alias' => 'putty', 'description' => 'A secure shell / telnet client for Windows',
 							   'experience' => "I was introduced to PuTTY by IBM's Master the Mainframe competition, and have since found it invaluable for accessing linux servers from windows machines."]);
-		$laravel = Skill::create(['name' => 'Laravel', 'importance' => 4, 'alias' => 'laravel', 'description' => 'An MVC framework for PHP web-applications',
+		$laravel = Skill::create(['name' => 'Laravel', 'type' => 'software', 'importance' => 4, 'alias' => 'laravel', 'description' => 'An MVC framework for PHP web-applications',
 							   'experience' => "I have completed several 'Laracast' tutorials, and created Laravel Websites both in and out of the classroom.  This website is created using Laravel."]);
-		$git = Skill::create(['name' => 'Git / Github', 'importance' => 6, 'alias' => 'git', 'description' => 'The version control system and widely used online repository',
+		$git = Skill::create(['name' => 'Git / Github', 'type' => 'software', 'importance' => 6, 'alias' => 'git', 'description' => 'The version control system and widely used online repository',
 							   'experience' => "I spent a summer work-term using Git for version control, and have since been able to use it in both private and collaborative student projects.  Much of my work and history is available on github, username: 'arbuthnott'."]);
-		$vim = Skill::create(['name' => 'Vim Editor', 'alias' => 'vim', 'description' => 'The bare-bones (but always present) Linux text editor',
+		$vim = Skill::create(['name' => 'Vim Editor', 'type' => 'software', 'alias' => 'vim', 'description' => 'The bare-bones (but always present) Linux text editor',
 							   'experience' => "I had a brief introduction to vi/vim at an NSCC course, and then firmed up my ability over a summer work-term where I created and managed large amounts of code using only vim."]);
-		$mysql = Skill::create(['name' => 'MySQL', 'importance' => 3, 'alias' => 'mysql', 'description' => 'The popular data-platform, including phpMyAdmin for browser access',
+		$mysql = Skill::create(['name' => 'MySQL', 'type' => 'software', 'importance' => 3, 'alias' => 'mysql', 'description' => 'The popular data-platform, including phpMyAdmin for browser access',
 							   'experience' => "I have several years experience working with MySQL databases both in and out of the classroom.  My experience includes interfacing via Php code, and management through phpmyadmin in a browser."]);
-		$sqlite = Skill::create(['name' => 'SQLite', 'importance' => 3, 'alias' => 'sqlite', 'description' => 'The file-based SQL data-platform',
-							   'experience' => "I have been using SQLite databases throughout my second year at NSCC as a simple, protable database alternative."]);
-		$vmware = Skill::create(['name' => 'VMWare', 'importance' => 3, 'alias' => 'vmware', 'description' => 'Software for creating and using Virtual Machines',
+		$sqlite = Skill::create(['name' => 'SQLite', 'type' => 'software', 'importance' => 3, 'alias' => 'sqlite', 'description' => 'The file-based SQL data-platform',
+							   'experience' => "I have been using SQLite databases throughout my second year at NSCC as a simple, portable database alternative."]);
+		$vmware = Skill::create(['name' => 'VMWare', 'type' => 'software', 'importance' => 3, 'alias' => 'vmware', 'description' => 'Software for creating and using Virtual Machines',
 							   'experience' => "I have used Virtual Machines almost continuously over two years at NSCC.  I am familiar with the creation and use of both Windows and Linux Machines."]);
-		$phab = Skill::create(['name' => 'Phabricator/Arcanist', 'alias' => 'phab', 'description' => 'A ticketing, documentation and change-management platform for business',
+		$phab = Skill::create(['name' => 'Phabricator/Arcanist', 'type' => 'software', 'alias' => 'phab', 'description' => 'A ticketing, documentation and change-management platform for business',
 							   'experience' => "I spent a summer work-term at a company where Phabricator was used extensively - for task ticketing and documentation, and as a git-wrapper for version control (through Arcanist)."]);
 
 		// Other technical Skills
-		$math = Skill::create(['name' => 'Mathematics', 'importance' => 6, 'alias' => 'math', 'description' => 'Comfort with numerical methods and their uses',
+		$math = Skill::create(['name' => 'Mathematics', 'type' => 'technical', 'importance' => 6, 'alias' => 'math', 'description' => 'Comfort with numerical methods and their uses',
 							   'experience' => "My history includes a Master's degree in Mathematics from the University of Waterloo.  In software design, I make regular use of my aptitude for numbers and logical design."]);
-		$algorithm = Skill::create(['name' => 'Algorithm Design', 'importance' => 6, 'alias' => 'algorithm', 'description' => 'Design of logical, iterative methods to acheive desired results',
+		$algorithm = Skill::create(['name' => 'Algorithm Design', 'type' => 'technical', 'importance' => 6, 'alias' => 'algorithm', 'description' => 'Design of logical, iterative methods to acheive desired results',
 							   'experience' => "My history in Abstract Math gives me a good sense of how to use recursion, iteration, and heuristic statistics to achieve effects in OOP, visual effects, or data analysis."]);
-		$mvc = Skill::create(['name' => 'MVC Architecture', 'importance' => 4, 'alias' => 'mvc', 'description' => 'The Model/View/Controller method of application design',
+		$mvc = Skill::create(['name' => 'MVC Architecture', 'type' => 'technical', 'importance' => 4, 'alias' => 'mvc', 'description' => 'The Model/View/Controller method of application design',
 							   'experience' => "I have had the chance to code MVC applications both from scratch and using the Laravel Framework.  I appreciate the design principles, and continue to use them in personal projects."]);
-		$oop = Skill::create(['name' => 'OOP', 'importance' => 4, 'alias' => 'oop', 'description' => 'Object Oriented Programming',
+		$oop = Skill::create(['name' => 'OOP', 'type' => 'technical', 'importance' => 4, 'alias' => 'oop', 'description' => 'Object Oriented Programming',
 							   'experience' => "I have been using Objects and OOP principles since I first learned to code.  Though I use 'functional' logic when appropriate, I appreciate what OOP can offer.  I have used OOP particularly often for school projects and in game designs."]);
-		$database = Skill::create(['name' => 'Database Design', 'importance' => 4, 'alias' => 'database', 'description' => 'Design of efficient and functional relational databases',
+		$database = Skill::create(['name' => 'Database Design', 'type' => 'technical', 'importance' => 4, 'alias' => 'database', 'description' => 'Design of efficient and functional relational databases',
 							   'experience' => "I appreciate the efficiency and scalability of well designed databases.  Over a summer workterm I was able to design a MySQL database meant to collate data on user events several thousand times daily, and efficient storage was a particular concern."]);
 		
 		// Soft skills / Other
-		$uml = Skill::create(['name' => 'UML Documentation', 'importance' => 3, 'alias' => 'uml', 'description' => 'Code and interface documentation including Unified Modelling Language diagrams',
+		$uml = Skill::create(['name' => 'UML Documentation', 'type' => 'other', 'importance' => 3, 'alias' => 'uml', 'description' => 'Code and interface documentation including Unified Modelling Language diagrams',
 							   'experience' => "At NSCC, I took a course devoted to UML methods of documentation, and I have been able to implement those methods in my other courses and over my summer work-term."]);
-		$comm = Skill::create(['name' => 'Communication', 'importance' => 0, 'alias' => 'comm', 'description' => 'Written, remote and in person communication skills',
+		$comm = Skill::create(['name' => 'Communication', 'type' => 'other', 'importance' => 0, 'alias' => 'comm', 'description' => 'Written, remote and in person communication skills',
 							   'experience' => "I have a long history of being a 'front-line' employee, and I have excellent communication skills, including both written and face-to-face communication."]);
-		$elearn = Skill::create(['name' => 'E-Learning', 'importance' => 0, 'alias' => 'elearn', 'description' => 'Ability to learn independantly and from online sources',
+		$elearn = Skill::create(['name' => 'E-Learning', 'type' => 'other', 'importance' => 0, 'alias' => 'elearn', 'description' => 'Ability to learn independantly and from online sources',
 							   'experience' => "I have independantly learned many skills from online tutorials (java and python for example), and am comfortable conducting research and learning from what I find."]);
-		$ui = Skill::create(['name' => 'User Interface Design', 'importance' => 0, 'alias' => 'ui', 'description' => 'Methods to design simple, pleasing user interfaces',
+		$ui = Skill::create(['name' => 'User Interface Design', 'type' => 'other', 'importance' => 0, 'alias' => 'ui', 'description' => 'Methods to design simple, pleasing user interfaces',
 							   'experience' => "I enjoy 'polishing' my projects to be easy to use and pleasing to look at.  My time at NSCC includes a course in good user interface design."]);
-		$agile = Skill::create(['name' => 'Agile Workflow', 'importance' => 4, 'alias' => 'agile', 'description' => 'Iterative, adaptive methods of software design and implementation',
+		$agile = Skill::create(['name' => 'Agile Workflow', 'type' => 'other', 'importance' => 4, 'alias' => 'agile', 'description' => 'Iterative, adaptive methods of software design and implementation',
 							   'experience' => "I am familiar with Agile project management methods."]);
-		$scrum = Skill::create(['name' => 'Scrum Workflow', 'importance' => 4, 'alias' => 'scrum', 'description' => 'Knowledge of Scrum roles and project methods',
+		$scrum = Skill::create(['name' => 'Scrum Workflow', 'type' => 'other', 'importance' => 4, 'alias' => 'scrum', 'description' => 'Knowledge of Scrum roles and project methods',
 							   'experience' => "I am familiar with Scrum Project Methodology, and understand the requirements of the various roles and artifacts."]);
 		
 		// Now attach some related skills.

@@ -39,6 +39,5 @@
 @endsection
 
 @section('endOfBody')
-    {!! Html::script('js/fish.js') !!}
-    {!! Html::script('js/ripple.js') !!}
+    
 @endsection

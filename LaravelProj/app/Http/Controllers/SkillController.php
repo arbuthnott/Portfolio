@@ -9,12 +9,15 @@ use Illuminate\Http\Request;
 class SkillController extends Controller {
 
 	public function index() {
-        $skills = Skill::orderBy('importance', 'desc')->get();
-        return view('resume.skills', compact('skills'));
+        $languages = Skill::language()->orderBy('importance', 'desc')->get();
+		$software = Skill::software()->orderBy('importance', 'desc')->get();
+		$technical = Skill::technical()->orderBy('importance', 'desc')->get();
+		$other = Skill::other()->orderBy('importance', 'desc')->get();
+        return view('resume.skills', compact(['languages', 'software', 'technical', 'other']));
     }
     
     public function show(Skill $skill) {
-        dd($skill);
+		return view('resume.skillDetail', compact('skill'));
     }
 
 }

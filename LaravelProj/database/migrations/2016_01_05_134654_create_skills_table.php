@@ -16,6 +16,7 @@ class CreateSkillsTable extends Migration {
 			$table->increments('id');
 			$table->string('name');
             $table->string('alias')->unique();
+			$table->string('type')->nullable();
             $table->integer('importance')->unsigned()->default(0);
 			$table->text('description');
 			$table->text('experience')->nullable();
