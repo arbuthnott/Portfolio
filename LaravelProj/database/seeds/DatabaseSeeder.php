@@ -89,7 +89,7 @@ class ProjectTableSeeder extends Seeder {
 			'description' => "This is an old WebPage I created for my (then) 3 year old son to play with. It's a set of trivia questions about our solar system wrapped up in a game-like interface, all implemented using javascript and css."]);
 		$fishies = Project::create([
 			'name' => 'FishPond Game using Python and SimpleGui', 'alias' => 'fishies', 'other_link' => "http://www.codeskulptor.org/#user28_wBpHroOrjnRy2A1.py",
-			'importance' => 4, 'completion_date' => '2012-04-10',
+			'importance' => 8, 'completion_date' => '2012-04-10',
 			'description' => "This game, written using Python and SimpleGui library, uses the same movement algorithms as the fish/shapes on this website. It was written for an online course that used the 'CodeSkulptor' website. If you click on the link, you can see the source on CodeSkulptor, and clicking Play will allow you to play the game in your browser."]);
 		$euler = Project::create([
 			'name' => 'Project Euler Problem Solver, Level 2', 'alias' => 'euler', 'other_link' => "https://projecteuler.net/archives",
@@ -97,7 +97,7 @@ class ProjectTableSeeder extends Seeder {
 			'description' => "Euler was a famous mathematician, and Project Euler is a (somewhat dated) online community where users solve problems using math, algorithm design, and code. Problems like 'find the millionth prime number' are posed on the site, and your progress is updated when you solve a problem. I have solved 50 problems at Project Euler. You can browse the problems they offer at the provided link."]);
 		$battlechess = Project::create([
 			'name' => 'Battle-Chess for Java Swing', 'alias' => 'battlechess', 'github_link' => "https://github.com/arbuthnott/JavaEclipse/tree/master/BoardGame",
-			'importance' => 3, 'completion_date' => '2016-01-03',
+			'importance' => 8, 'completion_date' => '2016-01-03',
 			'description' => "This swing game is a board-game invented by my young son and I. It is a little like chess, but the pieces can all strike at a distance in different ways, and can withstand different numbers of hits before they are 'taken'. We set out to invent the rules and play this on a physical board, but some of the calculation and data details made it a good fit for an electronic game. When time permits, I intend to create an AI player, and implement the game as an Android App."]);
 		$scbugs = Project::create([
 			'name' => 'Bug Team at SimplyCast', 'alias' => 'scbugs', 'other_link' => "https://www.simplycast.com/",
@@ -109,7 +109,7 @@ class ProjectTableSeeder extends Seeder {
 			'description' => "I acted as 'Gamification Analyst' during my 4 month Co-op term at SimplyCast. An important part of the role was the theoretical design of how the Gamification would work: what data would be needed, how would it be catalogued and accessed, etc. One desired outcome was a recommendation system that would make reasonable suggestions about what features of the Web-App users should look at based on what they had previously used. I was successful in designing a database, and suggestion algorithms that would meet these goals, and store data that would later allow analysis of suggestion success. I was leading, not assisting in these designs, and I created the algorithms from scratch."]);
 		$scimplement = Project::create([
 			'name' => 'Implementation of Gamification Backend at SimplyCast', 'alias' => 'scimplement', 'other_link' => "https://www.simplycast.com/",
-			'importance' => 9, 'completion_date' => '2015-08-28',
+			'importance' => 7, 'completion_date' => '2015-08-28',
 			'description' => "I acted as 'Gamification Analyst' during my 4 month Co-op term at SimplyCast. After designing algorithms for data-collection and suggestion of Web-App features to users, I was able to implement the prototype on a large portion of the live application. This involved triggering data-recording in a MySQL Database I designed and created, and writing scripts that could access and collate that data into suggestions or reports. Scalability was a factor, as data recording was triggered several thousand times each day. Inserting the triggers properly involved lots of work in Php and Javascript, as well as work with the APIs of third-party plugins, such as CK-Editor. Following implementation, data collection went on successfully for a month or so before the end of my Co-op term."]);		
 		
 		/////////////////////////////////////
@@ -279,7 +279,7 @@ class SkillsTableSeeder extends Seeder {
 		$cplus = Skill::create(['name' => 'C++', 'type' => 'language', 'importance' => 8, 'alias' => 'cplus', 'description' => 'The C++ programming language',
 							   'experience' => "I've used C++ for foundational coding throughout my entire final year at Nova Scotia Community College."]);
 		$python = Skill::create(['name' => 'Python', 'type' => 'language', 'importance' => 5, 'alias' => 'python', 'description' => 'A fasionable, readable programming language',
-							   'experience' => "Python is my favorite language. I taught Python to myself, and furthered my knowledge by completing several Coursera courses run by the Faculty and Rice University."]);
+							   'experience' => "Python is my favorite language. I taught Python to myself, and furthered my knowledge by completing several Coursera courses run by the Faculty at Rice University."]);
 		$js = Skill::create(['name' => 'JavaScript', 'type' => 'language', 'importance' => 8, 'alias' => 'js', 'description' => 'The client-side scripting language for browsers',
 							   'experience' => "I have a long history of dabbling with Javascript (and its extentions and libraries) to enhance personal web projects.  Javascript has been used and taught in several of my college courses."]);
 		$html = Skill::create(['name' => 'HTML', 'type' => 'language', 'importance' => 2, 'alias' => 'html', 'description' => 'Hypertext Markup Language - the XML based web language',

@@ -10,7 +10,7 @@ $(document).ready(function() {
         // get click position in the animFrame
         var offset = frame.offset();
         var clickx = e.clientX - $(this).offset().left;
-        var clicky = e.clientY - $(this).offset().top;
+        var clicky = e.clientY - $(this).offset().top + $(window).scrollTop();
         
         // create the ripple
         var rgb = rgbs[parseInt(Math.random() * rgbs.length)];

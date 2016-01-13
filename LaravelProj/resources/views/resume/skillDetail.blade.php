@@ -2,7 +2,6 @@
 
 @section('endOfHead')
     <title>Skill: {{ $skill->name }}</title>
-    <link href="{{ asset('/css/skills.css') }}" rel="stylesheet">
 @endsection
 
 
@@ -16,27 +15,31 @@
         @include('resume.partials.sidenav', ['homepage' => false])
         
         <section class="content">
-            <h3><span class="subtitle">skill &rtri; </span>{{ $skill->name }}</h3>
+            <h2>skill &rtri; {{ $skill->name }}</h2>
             <p class="subtitle">{{ $skill->description }}</p>
             <hr />
             <p>{{ $skill->experience }}</p>
             
-            <h4>Related Skills:</h4>
+            <h3>Related Skills:</h3>
             @foreach($skill->relatedSkills as $related)
                 <span class="skillBrick"><a href="/skills/{{ $related->alias }}">{{ $related->name }}</a></span>
             @endforeach
             <hr />
             
-            <h4>Related Projects:</h4>
-            @foreach($skill->projects()->orderBy('importance', 'desc')->get() as $project)
-                <p></p>
-            @endforeach
-            <hr />
+            @if (!$skill->projects->isEmpty())
+                <h3 class="green">Related Projects:</h3>
+                @foreach($skill->projects()->orderBy('importance', 'desc')->get() as $project)
+                    @include('resume.partials.projectTile', ['project' => $project])
+                @endforeach
+                <hr class="clearing" />
+            @endif
             
-            <h4>Related Education:</h4>
-            @foreach($skill->courses()->orderBy('importance', 'desc')->get() as $course)
-                <p></p>
-            @endforeach
+            @if (!$skill->courses->isEmpty())
+                <h3 class="yellow">Related Education:</h3>
+                @foreach($skill->courses()->orderBy('importance', 'desc')->get() as $course)
+                    @include('resume.partials.courseTile', ['course' => $course])
+                @endforeach
+            @endif
                 
         </section>
     </div>

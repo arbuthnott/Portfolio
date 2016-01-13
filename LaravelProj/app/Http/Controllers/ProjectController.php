@@ -9,11 +9,12 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller {
 
 	public function index() {
-        return "Project controller, index function";
+		$projects = Project::orderBy('importance', 'desc')->get();
+        return view('resume.projects', compact('projects'));
     }
     
     public function show(Project $project) {
-        dd($project);
+        return view('resume.projectDetail', compact('project'));
     }
 
 }

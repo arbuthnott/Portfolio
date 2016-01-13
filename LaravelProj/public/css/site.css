@@ -1,7 +1,12 @@
 /************************************
  * Styles for whole site
+ * by Chris Arbuthnott
+ * Jan, 2016
  ***********************************/
 
+/**********************************************************
+ * Setup for animated background, including z-indices
+ **********************************************************/
 .fullScreen {
     width: 100%;
     min-height: 90vh;
@@ -35,6 +40,9 @@ h1, hr, nav, ul, section, article, div {
     left: 0px;
 }
 
+/**********************************************************
+ * Page header and navigation controls
+ **********************************************************/
 h1 {
     font-size: 42px;
 }
@@ -86,52 +94,6 @@ h1 .subtitle {
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0033FF), to(#005DFF));
     background: -webkit-linear-gradient(0% 0%, 0% 100%, from(#0033FF), to(#005DFF));
     background: -moz-linear-gradient(center top, #0033FF, #005DFF);
-}
-
-section.content {
-    display: inline-block;
-    margin: 4px 0px 20px 20px;
-    width: 600px;
-    padding: 0px 20px;
-    
-    border: 1px solid white;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-}
-
-article.floatingRight {
-    float: right;
-    width: 340px;
-    color: white;
-    margin-top: 4px;
-    padding: 0px 24px 20px 24px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    
-    background: rgb(150,115,85);
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(215,165,65)), to(rgb(130,100,70)));
-    background: -webkit-linear-gradient(0% 0%, 0% 100%, from(rgb(215,165,65)), to(rgb(130,100,70)));
-    background: -moz-linear-gradient(center top, rgb(215,165,65), rgb(130,100,70));
-}
-
-article.floatingRight h3 {
-    text-align: center;
-    text-shadow: 1px 1px 4px black;
-    font-size: 24px;
-}
-
-article.floatingRight p {
-    font-size: 18px;
-    margin: 16px 0px;
-    line-height: 1.3em;
-}
-
-article.floatingRight p em {
-    font-style: inherit;
-    color: lightgrey;
-    text-shadow: 1px 1px 4px black;
 }
 
 nav.sideNav {
@@ -195,4 +157,188 @@ div.slideButton+ul a:hover {
     text-decoration: none;
     background-color: rgba(255,255,255,0.1);
     color: white;
+}
+
+/**********************************************************
+ * Universal main-content containers
+ **********************************************************/
+section.content {
+    display: inline-block;
+    margin: 4px 0px 20px 20px;
+    width: 600px;
+    padding: 0px 20px 20px 20px;
+    
+    border: 1px solid white;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+section.content h2 {
+    font-size: 28px;
+}
+
+section.content h3 {
+    font-size: 18px;
+}
+
+section.content p.subtitle {
+    color: grey;
+    font-style: italic;
+}
+
+.yellow {color: yellow;}
+.cyan {color: cyan;}
+.pink {color: rgb(255,100,0);}
+.green {color: rgb(100,255,100);}
+.clearing {clear: both;}
+
+a.linkOnly {
+    color: inherit;
+}
+
+a.linkOnly:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+article.floatingRight {
+    float: right;
+    width: 340px;
+    color: white;
+    margin-top: 4px;
+    padding: 0px 24px 20px 24px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    
+    background: rgb(150,115,85);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(215,165,65)), to(rgb(130,100,70)));
+    background: -webkit-linear-gradient(0% 0%, 0% 100%, from(rgb(215,165,65)), to(rgb(130,100,70)));
+    background: -moz-linear-gradient(center top, rgb(215,165,65), rgb(130,100,70));
+}
+
+article.floatingRight h3 {
+    text-align: center;
+    text-shadow: 1px 1px 4px black;
+    font-size: 24px;
+}
+
+article.floatingRight p {
+    font-size: 18px;
+    margin: 16px 0px;
+    line-height: 1.3em;
+}
+
+article.floatingRight p em {
+    font-style: inherit;
+    color: lightgrey;
+    text-shadow: 1px 1px 4px black;
+}
+
+/**********************************************************
+ * Skill-related containers
+ **********************************************************/
+
+.skillBrick {
+    display: inline-block;
+    border: 1px solid white;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: grey;
+    margin: 0px 12px 12px 0px;
+}
+
+.skillBrick:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.skillBrick a {
+    display:block;
+    padding: 4px;
+    color: black;
+    font-weight: bold;
+}
+
+.skillBrick a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 2px grey;
+}
+
+/**********************************************************
+ * Project-related containers
+ **********************************************************/
+div.tileSpacer {
+    display: block;
+    float: left;
+    margin: 5px 2%;
+    width: 45%;
+    height: 340px;
+}
+
+article.projectTile {
+    margin: 0px auto;
+    padding: 0px 8px;
+    word-wrap: break-word;
+    border: 1px solid white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+article.projectTile:hover {
+    border: 1px solid darkgrey;
+    box-shadow: 0px 0px 12px grey;
+}
+
+article.projectTile h4 {
+    font-size: 16px;
+    text-align: center;
+}
+
+article.projectTile img {
+    display: block;
+    margin: 0px auto 12px auto;
+    width: 95%;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px darkgrey;
+}
+
+img.mainProject {
+    display: block;
+    margin: 0px auto 24px auto;
+    width: 95%;
+    border: 2px solid black;
+    box-shadow: 4px 4px 16px darkgrey;
+}
+
+article.projectTile ul {
+    font-size: 12px;
+    padding-left: 0px;
+    list-style: none;
+}
+
+/**********************************************************
+ * Course-related containers
+ **********************************************************/
+
+article.courseTile {
+    margin: 20px 6px;
+    padding: 0px 8px;
+    border: 1px solid white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+article.courseTile:hover {
+    border: 1px solid darkgrey;
+    box-shadow: 0px 0px 12px grey;
+}
+
+article.courseTile ul {
+    font-size: 12px;
+    padding-left: 0px;
+    list-style: none;
 }

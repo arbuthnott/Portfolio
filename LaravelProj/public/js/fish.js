@@ -101,7 +101,7 @@ $(document).ready( function() {
         // get click position in the animFrame
         var offset = $(this).offset();
         var clickx = e.clientX - $(this).offset().left;
-        var clicky = e.clientY - $(this).offset().top;
+        var clicky = e.clientY - $(this).offset().top + $(window).scrollTop();
         
         // stop the resetting of destination for 3 seconds.
         clearInterval(destinationId);

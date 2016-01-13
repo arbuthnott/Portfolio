@@ -2,7 +2,6 @@
 
 @section('endOfHead')
     <title>Skills</title>
-    <link href="{{ asset('/css/skills.css') }}" rel="stylesheet">
 @endsection
 
 
@@ -16,7 +15,7 @@
         @include('resume.partials.sidenav', ['homepage' => false])
         
         <section class="content">
-            <h3>Information Technology Skills</h3>
+            <h2>Information Technology Skills</h2>
             <hr />
             <p>
                 These are some of the IT Skills I have learned through formal education, self study,
