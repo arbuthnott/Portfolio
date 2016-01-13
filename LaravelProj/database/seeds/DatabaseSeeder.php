@@ -34,7 +34,7 @@ class ProjectTableSeeder extends Seeder {
 			'importance' => 5, 'completion_date' => '2015-12-12',
 			'description' => "Created for my college J2EE course, this is a sketch of a full e-commerce website for a bookstore, built from scratch using J2EE tools.  The site includes separate user and admin login, with a web-interface back end for administrative users to update records or inventories.  Regular site visitors have access to a modifiable profile, a virtual shopping carts and records of their previous orders.  The full code is available on github, and includes a document with one sentence descriptions of each servlet, filter, and .jsp file."]);
 		$ttt = Project::create([
-			'name' => 'TicTacToe with AI Opponent', 'alias' => 'ttt', 'github_link' => "https://github.com/arbuthnott/CPPVisualStudio/tree/master/TicTacToeV2",
+			'name' => 'TicTacToe with AI Opponent', 'alias' => 'ttt', 'github_link' => "https://github.com/arbuthnott/CPPVisualStudio/tree/master/TicTacToe",
 			'importance' => 3, 'completion_date' => '2015-10-01',
 			'description' => "This console implementation of TicTacToe was my college introduction to the C++ language. Part of the grade was awarded for having a computer player (or 'AI') that could not be beaten. My AI used the Minimax algorithm to search the entire game tree, and make an optimal move assuming it was playing against an ideal opponent."]);
 		$zombies = Project::create([

@@ -28,12 +28,13 @@
             <hr />
             
             <h4>Related Projects:</h4>
-            @foreach($skill->projects as $project)
+            @foreach($skill->projects()->orderBy('importance', 'desc')->get() as $project)
                 <p></p>
             @endforeach
+            <hr />
             
             <h4>Related Education:</h4>
-            @foreach($skill->courses as $course)
+            @foreach($skill->courses()->orderBy('importance', 'desc')->get() as $course)
                 <p></p>
             @endforeach
                 
