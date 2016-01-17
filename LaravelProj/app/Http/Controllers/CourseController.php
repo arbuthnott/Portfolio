@@ -8,11 +8,12 @@ use Illuminate\Http\Request;
 class CourseController extends Controller {
 
 	public function index() {
-        return "Course controller, index function";
+		$courses = Course::orderBy('importance', 'desc')->get();
+        return view('resume.courses', compact('courses'));
     }
     
     public function show(Course $course) {
-        dd($course);
+		return view('resume.courseDetail', compact('course'));
     }
 
 }

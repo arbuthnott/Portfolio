@@ -53,6 +53,7 @@
                         {{ $oth->name }}
                     </a></span>
                 @endforeach
+            <p><a href="/">Back to Main Page</a></p>
                 
         </section>
     </div>

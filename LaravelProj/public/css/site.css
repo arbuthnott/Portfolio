@@ -167,6 +167,7 @@ section.content {
     margin: 4px 0px 20px 20px;
     width: 600px;
     padding: 0px 20px 20px 20px;
+    word-wrap: break-word;
     
     border: 1px solid white;
     -webkit-border-radius: 8px;
@@ -341,4 +342,18 @@ article.courseTile ul {
     font-size: 12px;
     padding-left: 0px;
     list-style: none;
+}
+
+h4.courseTitle {
+    margin: 10px 0px 0px 0px;
+}
+
+h4.courseTitle+ul {
+    font-size: 14px;
+}
+
+img.diploma {
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0px 0px 16px darkgrey;
 }

@@ -30,6 +30,7 @@
             <p class="subtitle">
                 *Click on any project to learn more about it.
             </p>
+            <p><a href="/">Back to Main Page</a></p>
             <hr />
             
             @foreach($projects as $project)

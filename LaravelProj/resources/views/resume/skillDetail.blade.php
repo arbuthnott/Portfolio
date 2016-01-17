@@ -24,6 +24,7 @@
             @foreach($skill->relatedSkills as $related)
                 <span class="skillBrick"><a href="/skills/{{ $related->alias }}">{{ $related->name }}</a></span>
             @endforeach
+            <p><a href="/skills">Back to All Skills</a></p>
             <hr />
             
             @if (!$skill->projects->isEmpty())

@@ -41,6 +41,7 @@
                     </li>
                 @endif
             </ul>
+            <p><a href="/projects">Back to All Projects</a></p>
             <hr />
             
             <h3>Related Skills:</h3>

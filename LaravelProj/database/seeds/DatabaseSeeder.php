@@ -169,7 +169,7 @@ class CourseTableSeeder extends Seeder {
 			'topic_list' => 'Python Language, CokeSkulptor site, Objects, GUI Libraries, Game Mechanics',
 			'description' => "This is an online course from Rice University offered by Coursera.org. The course teaches Python from scratch in an online editor you can find at CodeSkulptor.org."]);
 		$python2 = Course::create(['code' => 'PYTHON II', 'name' => 'Principles of Computing (in Python)', 'alias' => 'python2',
-			'importance' => 3, 'grade' => 100.0, 'completion_date' => '2014-04-19',
+			'importance' => 6, 'grade' => 100.0, 'completion_date' => '2014-04-19',
 			'topic_list' => 'Python Language, Game Algorithms, MiniMax method, Breadth vs Depth First Search',
 			'description' => "A second online course in Python from Rice University, via Coursera.org. This course got deeper into some heavy computing, creating AI game opponents that search game trees, etc."]);
 		$bachelors = Course::create(['code' => 'BSc Mathematics', 'name' => 'Bachelors Degree from University of Saskatchewan', 'alias' => 'bachelors',
@@ -202,11 +202,11 @@ class CourseTableSeeder extends Seeder {
 			'topic_list' => 'UI Best Practices, Mobile UI, Navigation Hierarchies, Adobe Products, Interface Testing',
 			'description' => "In this course I learned to design interfaces for functional as well as visual appeal. We investigated functional layout of existing applications and looked at alternatives that may be preferred by users."]);
 		$db = Course::create(['code' => 'DBAS 1100', 'name' => 'Database Development', 'alias' => 'db',
-			'importance' => 0, 'grade' => 100.0, 'completion_date' => '2015-04-30',
+			'importance' => 5, 'grade' => 100.0, 'completion_date' => '2015-04-30',
 			'topic_list' => 'Scripting and Querying, Entity Relationships, SQL functions, Inner/Outer Joins, Scalable Design',
 			'description' => "In this course I learned how to design an Efficient, Scalable database. We learned to query easy-to-read information from across multiple tables using Joins and SQL functions."]);
 		$linux = Course::create(['code' => 'OSYS 1000', 'name' => 'Operating Systems: Unix/Linux', 'alias' => 'linux',
-			'importance' => 0, 'grade' => 100.0, 'completion_date' => '2015-04-30',
+			'importance' => 2, 'grade' => 100.0, 'completion_date' => '2015-04-30',
 			'topic_list' => 'Installation Hierarchy, Shell Commands, Package Management, Scripting, VI/VIM Editor, Virtualization, Linux Networking',
 			'description' => "This course introduced me the linux family of operating systems. I learned 'day-to-day' use and some scripting to handle large file structures. I also became familiar with the VIM text editor, and a small amount of Perl scripting."]);
 		$oopIntro = Course::create(['code' => 'PROG 1400', 'name' => 'Intro to Object Oriented Programming', 'alias' => 'oopIntro',
@@ -214,29 +214,29 @@ class CourseTableSeeder extends Seeder {
 			'topic_list' => 'Object Inheritance, Abstraction, Polymorphism, Overrides and Implementation, Java Swing Applications',
 			'description' => "In this course we used Eclipse to create Java Swing applications making use of Object Oriented Programming. Two notable projects were a screensaver implementing collision detection and smooth motion, and a combat simulation game with objects representing combatants and weapons of various sorts."]);
 		$saad = Course::create(['code' => 'SAAD 1001', 'name' => 'System Analysis and Design', 'alias' => 'saad',
-			'importance' => 0, 'grade' => 97.0, 'completion_date' => '2015-04-30',
+			'importance' => 2, 'grade' => 97.0, 'completion_date' => '2015-04-30',
 			'topic_list' => 'Unified Modeling Language, Software Development Lifecycle, Use Cases, Test Cases, Sequence Diagrams, Class Diagrams',
 			'description' => "In this course I learned the Unified Modeling Language suite of documents, including testing docs, use cases, and class and sequence diagrams. Agile methodologies and scrum were touched on."]);
 		
 		// year 2, term 1:
 		$android = Course::create(['code' => 'APPD 2000', 'name' => 'Android Application Development', 'alias' => 'android',
-			'importance' => 0, 'grade' => 97.0, 'completion_date' => '2015-12-18',
+			'importance' => 4, 'grade' => 97.0, 'completion_date' => '2015-12-18',
 			'topic_list' => 'Mobile Interface Design, Activities and Intents, Data Persistence, SQLite, SDK Considerations',
 			'description' => "I learned to create simple Android Apps using the Android Studio IDE. Coding in Java, we covered the Activity Lifecycle, Intents, Library Widgets, and Fragments.  Several working Apps were created, runnable both on device emulators and various physical devices."]);
 		$php = Course::create(['code' => 'INET 2005', 'name' => 'Web Application Development', 'alias' => 'php',
-			'importance' => 0, 'grade' => 100.0, 'completion_date' => '2015-12-18',
+			'importance' => 7, 'grade' => 100.0, 'completion_date' => '2015-12-18',
 			'topic_list' => 'Php language, Php Frameworks (Laravel), Restful Architecture, Secure Login, MVC Architecture, N-tier Architecture, Ajax',
 			'description' => "I learned all the necessary pieces to create working Php Web Applications either from scratch or using a framework. CRUD apps were a focus, and the final project was the creation of a full Content Management System with administrative Web-interface for backend work."]);
 		$management = Course::create(['code' => 'INFT 2100', 'name' => 'Project Management', 'alias' => 'management',
-			'importance' => 0, 'grade' => 100.0, 'completion_date' => '2015-12-18',
+			'importance' => 3, 'grade' => 100.0, 'completion_date' => '2015-12-18',
 			'topic_list' => 'Agile Workflows, Scrum, Version Control, UML Documentation, Risk Management, Estimation, MS Project',
 			'description' => "In Project Management I learned common practices and workflows for working on larger project in Information Technology. The course included research and applying learned techniques to school projects."]);
 		$cplus = Course::create(['code' => 'PROG 2100', 'name' => 'Programming C++', 'alias' => 'cplus',
-			'importance' => 0, 'grade' => 99.0, 'completion_date' => '2015-12-18',
+			'importance' => 6, 'grade' => 99.0, 'completion_date' => '2015-12-18',
 			'topic_list' => 'C++ Language, Memory Management, Efficient Computation, Minimax Algorithm',
 			'description' => "In the C++ course I learned the principles of Memory Management, how to apply Destructors/Copy Constructors/Assignment Overrides to catch Memory Leaks, and how to use poiters to cut down on unnecessary duplication of objects. The assignments included some Algorithm design, and the Minimax Strategy for turn based games."]);
 		$j2ee = Course::create(['code' => 'WEBD 3102', 'name' => 'J2EE: Java Web Applications', 'alias' => 'j2ee',
-			'importance' => 0, 'grade' => 100.0, 'completion_date' => '2015-12-18',
+			'importance' => 5, 'grade' => 100.0, 'completion_date' => '2015-12-18',
 			'topic_list' => 'Apache Servers, Eclipse Mars, Servlets and Filters, .jsp Files, Tag Libraries, Concurrency',
 			'description' => "In this course, I learned the building blocks of a Java Web Application, and how to apply them to an Apache server from the Eclipse Mars IDE. Topics included backend Java Models, Servlet Controllers, Filters, .jsp Views, and Session vs Request Lifecycle."]);
 		
