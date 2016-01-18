@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'ResumeController@index');
+Route::get('overview', 'ResumeController@overview');
+Route::get('contact', 'ResumeController@contact');
+Route::post('send', 'ResumeController@send');
 
 Route::get('skills', 'SkillController@index');
 Route::get('skills/{skill}', 'SkillController@show');

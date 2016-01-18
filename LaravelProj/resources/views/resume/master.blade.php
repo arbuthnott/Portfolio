@@ -20,6 +20,7 @@
 <body>
 
 	@yield('content')
+	@include('resume.partials.footer')
 
 	<!-- jquery and other whole site scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

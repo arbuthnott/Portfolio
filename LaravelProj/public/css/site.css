@@ -159,6 +159,11 @@ div.slideButton+ul a:hover {
     color: white;
 }
 
+footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 /**********************************************************
  * Universal main-content containers
  **********************************************************/

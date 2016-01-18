@@ -1,0 +1,25 @@
+/**************************************************
+ * Style for the overview page
+ *************************************************/
+
+img.overview {
+    width: 50%;
+    display: block;
+    float: right;
+    margin: 20px 0px;
+    
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px rgb(80,80,80);
+}
+
+img.overview+h2 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+section.content p em {
+    font-style: normal;
+    text-shadow: 0px 0px 2px cyan;
+}
