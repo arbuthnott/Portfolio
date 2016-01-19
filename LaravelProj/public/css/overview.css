@@ -19,7 +19,7 @@ img.overview+h2 {
     margin-top: 100px;
 }
 
-section.content p em {
+section.content em {
     font-style: normal;
     text-shadow: 0px 0px 2px cyan;
 }

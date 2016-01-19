@@ -36,9 +36,10 @@
                 After two years of learning how to handle myself in many IT environments, I am looking forward to
                 re-entering the workforce and tackling the challenges it will bring.
             </p>
+            <p><a href="/">Back to Main Page</a></p>
             <hr />
             
-            <h3>Formal Education</h3>
+            <h3 class="cyan">Formal Education</h3>
                 <ul>
                     <li>
                         <strong>IT Diploma Program (Programming) at NSCC</strong><br />
@@ -58,8 +59,44 @@
                 </ul>
             <hr />
             
-            <h3>Employment Timeline</h3>
+            <h3 class="yellow">Employment Timeline</h3>
+                <ul>
+                    <li>
+                        <strong>Fulltime IT Student at NSCC</strong><br />
+                        September 2014 - present<br />
+                        <a href="/education">*See details on some of my courses</a>
+                    </li>
+                    <li>
+                        <strong>Gamification Analyst at SimplyCast</strong><br />
+                        April 2015 - August 2015<br />
+                        *Check out <a href="https://www.simplycast.com/" target="_blank">SimplyCast.com</a>
+                        or see some <a href="/projects/scimplement">Project Details</a>
+                    </li>
+                    <li>
+                        <strong>Letter Carrier for Canada Post</strong><br />
+                        April 2001 - August 2014
+                    </li>
+                    <li>
+                        <strong>Linear Algebra Lecturer at University of Waterloo</strong><br />
+                        September 2001 - December 2001<br />
+                        *See the <a href="http://www.ucalendar.uwaterloo.ca/1516/COURSE/course-MATH.html#MATH115" target="_blank">Course Description</a> for the course I taught
+                    </li>
+                </ul>
             <hr />
+            
+            <h3 class="pink">Skills and Software</h3>
+            <p>
+                From hobby-projects and NSCC courses, I am familiar with many coding languages:
+                Python, Java, C++, Php, Javascript, and many others.  I am familiar with a variety
+                of software platforms and coding frameworks.  
+            </p>
+            <p>
+                If you are looking for particular skills, please <a href="/skills">check my Skills page</a>,
+                and keep in mind that I am always interested in learning new technologies to serve new projects.
+            </p>
+            <p>
+                (by the way, you can also <a href="/projects">check my Projects page</a>)
+            </p>
         </section>
         
     </div>
