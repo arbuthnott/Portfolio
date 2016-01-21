@@ -1,0 +1,73 @@
+/**************************************************
+ * Style for the contact page
+ *************************************************/
+
+article.pianoKey {
+    color: white;
+    font-size: 18px;
+    margin: 4px 0px;
+    padding: 8px 0px;
+    line-height: 22px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 16px;
+    min-width: 18%;
+    display: inline-block;
+    float: left;
+    clear: both;
+}
+
+form input[type='text'], form input[type='email'], form textarea {
+    width: 81%;
+    background-color: rgba(255,255,255,0.15);
+    border: 1px solid white;
+    padding: 0px 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+form input[type='text']:hover, form input[type='email']:hover, form textarea:hover {
+    box-shadow: 0px 0px 8px grey;
+}
+
+form textarea {
+    resize: none;
+}
+
+form input[type='checkbox']+label {
+    float: none;
+    margin-left: 10px;
+}
+
+form input[type='submit'] {
+    font-size: 16px;
+    float: right;
+    width: 160px;
+    line-height: 30px;
+    border: none;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    
+    background: #0079FF;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0096FF), to(#005DFF));
+    background: -webkit-linear-gradient(0% 0%, 0% 100%, from(#0096FF), to(#005DFF));
+    background: -moz-linear-gradient(center top, #0096FF, #005DFF);
+}
+
+form input[type='submit']:hover {
+    background: #005DFF;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0033FF), to(#005DFF));
+    background: -webkit-linear-gradient(0% 0%, 0% 100%, from(#0033FF), to(#005DFF));
+    background: -moz-linear-gradient(center top, #0033FF, #005DFF);
+}
+

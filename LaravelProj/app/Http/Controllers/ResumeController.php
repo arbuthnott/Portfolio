@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\EmailRequest;
 
 class ResumeController extends Controller {
 
@@ -16,11 +17,18 @@ class ResumeController extends Controller {
 	}
 	
 	public function contact() {
-		// display contact page
+		return view('resume.contact');
 	}
 	
-	public function send() {
-		// send requested email, and return to contact page.
+	public function send(EmailRequest $request) {
+		$input = $request->all();
+		$headers = "From: " . $input['sender'];
+		if (isset($input['copyme'])) {
+			$headers .= ("\r\nCC: " . $input['sender'] . "\r\n");
+		}
+		mail('chris.arbuthnott@gmail.com', $input['subject'], $input['body'], $headers);
+		$confirm = "Thanks for the email!  I will get back to you soon.";
+		return view('resume.contact', compact('confirm'));
 	}
 
 }

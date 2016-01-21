@@ -111,6 +111,15 @@ class ProjectTableSeeder extends Seeder {
 			'name' => 'Implementation of Gamification Backend at SimplyCast', 'alias' => 'scimplement', 'other_link' => "https://www.simplycast.com/",
 			'importance' => 7, 'completion_date' => '2015-08-28',
 			'description' => "I acted as 'Gamification Analyst' during my 4 month Co-op term at SimplyCast. After designing algorithms for data-collection and suggestion of Web-App features to users, I was able to implement the prototype on a large portion of the live application. This involved triggering data-recording in a MySQL Database I designed and created, and writing scripts that could access and collate that data into suggestions or reports. Scalability was a factor, as data recording was triggered several thousand times each day. Inserting the triggers properly involved lots of work in Php and Javascript, as well as work with the APIs of third-party plugins, such as CK-Editor. Following implementation, data collection went on successfully for a month or so before the end of my Co-op term."]);		
+		$portfolio = Project::create([
+			'name' => 'This Portfolio Website', 'alias' => 'portfolio', 'github_link' => "https://github.com/arbuthnott/Portfolio/tree/master/LaravelProj",
+			'importance' => 5, 'completion_date' => '2016-01-20',
+			'description' => "This website is entirely my own creation, leveraged using the Laravel framework. The Javascript (the swimming shapes and the ripples) and CSS Styling (look and layout of the site) is entirely original. Getting the site live required learning how to customize an Apache server for Laravel, and how to manage it on Ubuntu server remotely. For remote management I used PuTTY and the Komodo IDE."]);		
+		$mtm = Project::create([
+			'name' => 'IBM Master the Mainframe Contest', 'alias' => 'mtm', 'other_link' => "http://www-03.ibm.com/systems/z/education/academic/masterthemainframe/",
+			'importance' => 4, 'completion_date' => '2015-10-01',
+			'description' => "IBM's Master the Mainframe competition is an annual timed contest in which students or hobbyists perform a series of tasks while remotely accessing some IBM Mainframe systems. There are three parts to the project with steeply ascending difficulty levels and time commitments. For the 2015 contest, I completed parts I and II in roughly one week. I gained experience using PuTTY and Vista tn3270 for remote access, and using a wide array of Command-style interfaces and Coding languages (JSON, Cobol, etc) while completing the tasks."]);
+		
 		
 		/////////////////////////////////////
 		// Attach relevant courses and skills
@@ -126,13 +135,13 @@ class ProjectTableSeeder extends Seeder {
 		$zombies->skills()->attach([$skills['cplus'], $skills['algorithm'], $skills['vstudio']]);
 		
 		$laravelCms->courses()->attach($courses['php']);
-		$laravelCms->skills()->attach([$skills['laravel'], $skills['php'], $skills['phpstorm'], $skills['mvc'], $skills['database'], $skills['css'], $skills['bash'], $skills['git']]);
+		$laravelCms->skills()->attach([$skills['sqlite'], $skills['mysql'], $skills['laravel'], $skills['php'], $skills['phpstorm'], $skills['mvc'], $skills['database'], $skills['css'], $skills['bash'], $skills['git'], $skills['sql']]);
 		$laravelBlog->courses()->attach($courses['php']);
-		$laravelBlog->skills()->attach([$skills['laravel'], $skills['php'], $skills['phpstorm'], $skills['elearn'], $skills['mvc']]);
+		$laravelBlog->skills()->attach([$skills['mysql'], $skills['laravel'], $skills['php'], $skills['phpstorm'], $skills['elearn'], $skills['mvc']]);
 		$mvc->courses()->attach($courses['php']);
 		$mvc->skills()->attach([$skills['php'], $skills['mvc'], $skills['phpstorm'], $skills['git']]);
 		
-		$life->courses()->attach($courses['android']);
+		$life->courses()->attach([$courses['android'], $courses['management']]);
 		$life->skills()->attach([$skills['agile'], $skills['scrum'], $skills['android'], $skills['uml'], $skills['comm']]);
 		$quizzer->courses()->attach($courses['android']);
 		$quizzer->skills()->attach([$skills['android'], $skills['java'], $skills['ui']]);
@@ -150,13 +159,18 @@ class ProjectTableSeeder extends Seeder {
 		
 		$fishies->courses()->attach([$courses['python1'], $courses['python2']]);
 		$fishies->skills()->attach([$skills['python'], $skills['math'], $skills['algorithm'], $skills['ui']]);
+		$euler->courses()->attach([$courses['masters']]);
 		$euler->skills()->attach([$skills['math'], $skills['algorithm'], $skills['java']]);
 		$battlechess->skills()->attach([$skills['java'], $skills['eclipse']]);
 		
-		$scbugs->skills()->attach([$skills['php'], $skills['js'], $skills['jquery'], $skills['phab'], $skills['git'], $skills['bash']]);
+		$scbugs->skills()->attach([$skills['php'], $skills['js'], $skills['jquery'], $skills['phab'], $skills['git'], $skills['bash'], $skills['putty']]);
+		$scplan->courses()->attach([$courses['masters']]);
 		$scplan->skills()->attach([$skills['algorithm'], $skills['math'], $skills['database'], $skills['php']]);
-		$scimplement->skills()->attach([$skills['php'], $skills['js'], $skills['jquery'], $skills['git'], $skills['mysql'], $skills['sql']]);
-		//
+		$scimplement->courses()->attach([$courses['linux']]);
+		$scimplement->skills()->attach([$skills['vim'], $skills['komodo'], $skills['php'], $skills['js'], $skills['jquery'], $skills['git'], $skills['mysql'], $skills['sql'], $skills['ajax'], $skills['putty']]);
+		$portfolio->courses()->attach([$courses['php']]);
+		$portfolio->skills()->attach([$skills['vim'], $skills['php'], $skills['laravel'], $skills['js'], $skills['css'], $skills['putty'], $skills['komodo'], $skills['jquery'], $skills['git']]);
+		$mtm->skills()->attach([$skills['putty'], $skills['bash'], $skills['elearn']]);
 
 	}
 }
@@ -255,7 +269,7 @@ class CourseTableSeeder extends Seeder {
 		$j2ee->skills()->attach([$skills['j2ee'], $skills['java'], $skills['eclipse'], $skills['mvc'], $skills['elearn']]);
 		
 		$design->skills()->attach([$skills['ui'], $skills['comm'], $skills['css']]);
-		$db->skills()->attach([$skills['sql'], $skills['mysql'], $skills['vmware']]);
+		$db->skills()->attach([$skills['database'], $skills['sql'], $skills['mysql'], $skills['vmware']]);
 		$linux->skills()->attach([$skills['bash'], $skills['vim'], $skills['putty']]);
 		$oopIntro->skills()->attach([$skills['oop'], $skills['java'], $skills['eclipse'], $skills['algorithm'], $skills['math']]);
 		$saad->skills()->attach([$skills['uml'], $skills['office'], $skills['agile'], $skills['scrum'], $skills['algorithm']]);
