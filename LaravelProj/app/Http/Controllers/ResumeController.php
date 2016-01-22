@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Message;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\EmailRequest;
@@ -22,6 +23,7 @@ class ResumeController extends Controller {
 	
 	public function send(EmailRequest $request) {
 		$input = $request->all();
+		Message::create($input);
 		$headers = "From: " . $input['sender'];
 		if (isset($input['copyme'])) {
 			$headers .= ("\r\nCC: " . $input['sender'] . "\r\n");
